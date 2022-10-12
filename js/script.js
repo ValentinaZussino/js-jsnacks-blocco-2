@@ -35,3 +35,22 @@ const generate = function (){
     }
 }
 btnList.addEventListener('click', generate)
+
+// ESERCIZIO 3
+// prendo btn calculate
+const calcBtn = document.getElementById('calculate');
+// creo array con numeri interi 
+const numeri = [1, 2, 3, 4, 5];
+const nLength = numeri.length;
+// creo ciclo per fare somma
+const avviaVedi = function(){
+    let odd = 0;
+    for(let i = 0; i < nLength; i++){
+        if([i] %2 !== 0){
+            odd += numeri[i];
+        }
+    }
+    document.getElementById('odd-sum').innerHTML += odd;
+}
+// on click
+calcBtn.addEventListener('click', avviaVedi);
